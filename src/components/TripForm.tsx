@@ -52,7 +52,7 @@ const TripForm: React.FC<TripFormProps> = ({ onSubmit, editingTrip, onCancelEdit
 
   useEffect(() => {
     // Real-time profit calculation
-    const profit = formData.tripAmount - formData.driverAmount - formData.fuel - formData.tolls + formData.commission;
+    const profit = formData.tripAmount - formData.driverAmount - formData.fuel - formData.tolls - formData.commission;
     setCalculatedProfit(profit);
   }, [formData.tripAmount, formData.driverAmount, formData.fuel, formData.tolls, formData.commission]);
 
